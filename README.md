@@ -61,7 +61,7 @@ df_obras = pd.DataFrame(
 ``` python
 df_obras
 ```
-::: {.output .stream .stdout}
+
     JF                       obra            latitude           longitude
     0              Paço Municipal -21.761477323835130 -43.349845686905425
     1                  ED. CIAMPI -21.760658258306233 -43.349631277710635
@@ -77,7 +77,7 @@ df_obras
     11  Residência Raphael Arcuri -21.763933461684431 -43.342050318189273
     12     Castelinho dos Bracher -21.763894356739176 -43.341967760518045
     13              Casa D´Itália -21.764444444444443 -43.348611111111111
-:::
+
 
 
 
