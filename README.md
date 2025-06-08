@@ -120,125 +120,24 @@ df_route.index.name = 'sequência'
 df_route
 ```
 
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+    JF                              obra            latitude           longitude
+    sequência                                                                   
+    0                     Paço Municipal -21.761477323835130 -43.349845686905425
+    1                         ED. CIAMPI -21.760658258306233 -43.349631277710635
+    2                      Galeria Pio X -21.760246094574889 -43.348784136608764
+    3               Cine Theatro Central -21.761301064584814 -43.347923147523424
+    4                     Palacete Pinho -21.760579286799263 -43.346829589353760
+    5                  Cia. Dias Cardoso -21.760207713387064 -43.344753431682562
+    6                     Hotel Príncipe -21.759973299999999 -43.344039400000000
+    7               Associação Comercial -21.759722222222223 -43.344166666666666
+    8             Cia. Pantaleone Arcuri -21.762723242493465 -43.342729824323776
+    9                       Vila Iracema -21.763148754507743 -43.344623118191841
+    10               Palacete dos Fellet -21.763342088453211 -43.345731046937551
+    11         Residência Raphael Arcuri -21.763933461684431 -43.342050318189273
+    12            Castelinho dos Bracher -21.763894356739176 -43.341967760518045
+    13                     Casa D´Itália -21.764444444444443 -43.348611111111111
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>JF</th>
-      <th>obra</th>
-      <th>latitude</th>
-      <th>longitude</th>
-    </tr>
-    <tr>
-      <th>sequência</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Paço Municipal</td>
-      <td>-21.761477323835130</td>
-      <td>-43.349845686905425</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ED. CIAMPI</td>
-      <td>-21.760658258306233</td>
-      <td>-43.349631277710635</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Galeria Pio X</td>
-      <td>-21.760246094574889</td>
-      <td>-43.348784136608764</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Cine Theatro Central</td>
-      <td>-21.761301064584814</td>
-      <td>-43.347923147523424</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Palacete Pinho</td>
-      <td>-21.760579286799263</td>
-      <td>-43.346829589353760</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Cia. Dias Cardoso</td>
-      <td>-21.760207713387064</td>
-      <td>-43.344753431682562</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Hotel Príncipe</td>
-      <td>-21.759973299999999</td>
-      <td>-43.344039400000000</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Associação Comercial</td>
-      <td>-21.759722222222223</td>
-      <td>-43.344166666666666</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Cia. Pantaleone Arcuri</td>
-      <td>-21.762723242493465</td>
-      <td>-43.342729824323776</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Vila Iracema</td>
-      <td>-21.763148754507743</td>
-      <td>-43.344623118191841</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Palacete dos Fellet</td>
-      <td>-21.763342088453211</td>
-      <td>-43.345731046937551</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Residência Raphael Arcuri</td>
-      <td>-21.763933461684431</td>
-      <td>-43.342050318189273</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Castelinho dos Bracher</td>
-      <td>-21.763894356739176</td>
-      <td>-43.341967760518045</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Casa D´Itália</td>
-      <td>-21.764444444444443</td>
-      <td>-43.348611111111111</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-```
 
 ### Definimos os etapas do passeio
 
