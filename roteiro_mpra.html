@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4879667e6fd9b8bf007e0d7019b2fff3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                top: 10px; left: 50px; width: auto; height: auto; 
+                background-color: white; padding: 10px; z-index:9999;
+                border: 2px solid grey; border-radius: 5px;
+                font-family: Arial; font-size: 14px">
+        <b>Museu de Percurso</b><br>
+        <b><i>Raphael Arcuri</b></i><br>
+        Projeto: <i>Letícia Rabelo</i>
+    </div>
+    
+    <div style="position: fixed; 
+                bottom: 10px; right: 10px; width: auto; height: auto; 
+                background-color: white; padding: 10px; z-index:9999;
+                border: 2px solid grey; border-radius: 5px;
+                font-family: Arial; font-size: 14px">
+        <b>Distância Percorrida</b><br>
+        2.57 km
+    </div>
+    
+            <div class="folium-map" id="map_4879667e6fd9b8bf007e0d7019b2fff3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4879667e6fd9b8bf007e0d7019b2fff3 = L.map(
+                "map_4879667e6fd9b8bf007e0d7019b2fff3",
+                {
+                    center: [-21.761832258002293, -43.345834751123064],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4949af912d3449e76071ccd4cd8531b7 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4949af912d3449e76071ccd4cd8531b7.addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "bottomleft",
+  "title": "Expandir",
+  "titleCancel": "Sair",
+  "forceSeparateButton": true,
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var marker_995cf085ac6fa9228442311ba0d6d3e0 = L.marker(
+                [-21.76147732383513, -43.349845686905425],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_c54470fe70273cd21150ae7be4c1fcc0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_995cf085ac6fa9228442311ba0d6d3e0.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Paço Municipal <br><b>Parada</b>: 0 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_995cf085ac6fa9228442311ba0d6d3e0.setIcon(icon_c54470fe70273cd21150ae7be4c1fcc0);
+            
+    
+            var poly_line_beb4cc556a2064e6109901fc44267055 = L.polyline(
+                [[-21.76147732383513, -43.349845686905425], [-21.760658258306233, -43.349631277710635]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_beb4cc556a2064e6109901fc44267055.bindTooltip(
+                `<div>
+                     <b>De</b>: Paço Municipal <br><b>Até</b>: ED. CIAMPI <br><b>Distância</b>: 93 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1be1c0baaaacebe6134378c54e5ebfa2 = L.marker(
+                [-21.760658258306233, -43.349631277710635],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_a9a78f7b979d0fbb63551981ad9ad642 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_1be1c0baaaacebe6134378c54e5ebfa2.bindTooltip(
+                `<div>
+                     <b>Nome</b>: ED. CIAMPI <br><b>Parada</b>: 1 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1be1c0baaaacebe6134378c54e5ebfa2.setIcon(icon_a9a78f7b979d0fbb63551981ad9ad642);
+            
+    
+            var poly_line_330f5df9fcd7d10d8ee3bb986017ab2f = L.polyline(
+                [[-21.760658258306233, -43.349631277710635], [-21.76024609457489, -43.348784136608764]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_330f5df9fcd7d10d8ee3bb986017ab2f.bindTooltip(
+                `<div>
+                     <b>De</b>: ED. CIAMPI <br><b>Até</b>: Galeria Pio X <br><b>Distância</b>: 99 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bd47384ef16a316b3842ac237a905a17 = L.marker(
+                [-21.76024609457489, -43.348784136608764],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_881bd2ea57b49e1072270ffcd0e67695 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_bd47384ef16a316b3842ac237a905a17.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Galeria Pio X <br><b>Parada</b>: 2 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bd47384ef16a316b3842ac237a905a17.setIcon(icon_881bd2ea57b49e1072270ffcd0e67695);
+            
+    
+            var poly_line_7f70b962db7ede525a35870c960b10b6 = L.polyline(
+                [[-21.76024609457489, -43.348784136608764], [-21.761301064584814, -43.347923147523424]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_7f70b962db7ede525a35870c960b10b6.bindTooltip(
+                `<div>
+                     <b>De</b>: Galeria Pio X <br><b>Até</b>: Cine Theatro Central <br><b>Distância</b>: 147 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e9eb322f5eb3357d73d3484ac26bd00d = L.marker(
+                [-21.761301064584814, -43.347923147523424],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_0913dc5f188bf72b6ee358db7f738dec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_e9eb322f5eb3357d73d3484ac26bd00d.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Cine Theatro Central <br><b>Parada</b>: 3 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e9eb322f5eb3357d73d3484ac26bd00d.setIcon(icon_0913dc5f188bf72b6ee358db7f738dec);
+            
+    
+            var poly_line_cb6aa19c1d757e906d7ea69918d4f4fa = L.polyline(
+                [[-21.761301064584814, -43.347923147523424], [-21.760579286799263, -43.34682958935376]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_cb6aa19c1d757e906d7ea69918d4f4fa.bindTooltip(
+                `<div>
+                     <b>De</b>: Cine Theatro Central <br><b>Até</b>: Palacete Pinho <br><b>Distância</b>: 138 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_40074f1cf115bdd390573f6eba0bb2fb = L.marker(
+                [-21.760579286799263, -43.34682958935376],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_e26c62ad789ea2249cad34d8d684a326 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_40074f1cf115bdd390573f6eba0bb2fb.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Palacete Pinho <br><b>Parada</b>: 4 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40074f1cf115bdd390573f6eba0bb2fb.setIcon(icon_e26c62ad789ea2249cad34d8d684a326);
+            
+    
+            var poly_line_697a1fbe05d4345cd2f7b55ad7100dc4 = L.polyline(
+                [[-21.760579286799263, -43.34682958935376], [-21.760207713387064, -43.34475343168256]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_697a1fbe05d4345cd2f7b55ad7100dc4.bindTooltip(
+                `<div>
+                     <b>De</b>: Palacete Pinho <br><b>Até</b>: Cia. Dias Cardoso <br><b>Distância</b>: 219 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_69715fe3045a267468687beaff4431c3 = L.marker(
+                [-21.760207713387064, -43.34475343168256],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_795fe69098bffe7a8b226acd5e8db564 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_69715fe3045a267468687beaff4431c3.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Cia. Dias Cardoso <br><b>Parada</b>: 5 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_69715fe3045a267468687beaff4431c3.setIcon(icon_795fe69098bffe7a8b226acd5e8db564);
+            
+    
+            var poly_line_3122f6963125e7861facda89b33d38d6 = L.polyline(
+                [[-21.760207713387064, -43.34475343168256], [-21.7599733, -43.3440394]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_3122f6963125e7861facda89b33d38d6.bindTooltip(
+                `<div>
+                     <b>De</b>: Cia. Dias Cardoso <br><b>Até</b>: Hotel Príncipe <br><b>Distância</b>: 78 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ef7b6cdf757aaeea834082bbc7ab01d8 = L.marker(
+                [-21.7599733, -43.3440394],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_c78dd22e754571b6cdf06a1ef92df5fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ef7b6cdf757aaeea834082bbc7ab01d8.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Hotel Príncipe <br><b>Parada</b>: 6 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef7b6cdf757aaeea834082bbc7ab01d8.setIcon(icon_c78dd22e754571b6cdf06a1ef92df5fc);
+            
+    
+            var poly_line_9007fdf5e9e87affe840324c49d90cfc = L.polyline(
+                [[-21.7599733, -43.3440394], [-21.759722222222223, -43.344166666666666]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_9007fdf5e9e87affe840324c49d90cfc.bindTooltip(
+                `<div>
+                     <b>De</b>: Hotel Príncipe <br><b>Até</b>: Associação Comercial <br><b>Distância</b>: 31 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a9879ddc637554781c24fdf72d0d28b3 = L.marker(
+                [-21.759722222222223, -43.344166666666666],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_f67ea04db408d7ff4cb9c4eaa7edac0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_a9879ddc637554781c24fdf72d0d28b3.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Associação Comercial <br><b>Parada</b>: 7 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a9879ddc637554781c24fdf72d0d28b3.setIcon(icon_f67ea04db408d7ff4cb9c4eaa7edac0e);
+            
+    
+            var poly_line_22a6a3db83cd44d4dda642c310f5b6b3 = L.polyline(
+                [[-21.759722222222223, -43.344166666666666], [-21.762723242493465, -43.342729824323776]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_22a6a3db83cd44d4dda642c310f5b6b3.bindTooltip(
+                `<div>
+                     <b>De</b>: Associação Comercial <br><b>Até</b>: Cia. Pantaleone Arcuri <br><b>Distância</b>: 364 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ab21fde3885e1bd026bd38d13fbabf8f = L.marker(
+                [-21.762723242493465, -43.342729824323776],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_350b88258cfc99d679a8d7aa9fe6337e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ab21fde3885e1bd026bd38d13fbabf8f.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Cia. Pantaleone Arcuri <br><b>Parada</b>: 8 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab21fde3885e1bd026bd38d13fbabf8f.setIcon(icon_350b88258cfc99d679a8d7aa9fe6337e);
+            
+    
+            var poly_line_9b7e95effff2951cc3013c15d70c178b = L.polyline(
+                [[-21.762723242493465, -43.342729824323776], [-21.763148754507743, -43.34462311819184]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_9b7e95effff2951cc3013c15d70c178b.bindTooltip(
+                `<div>
+                     <b>De</b>: Cia. Pantaleone Arcuri <br><b>Até</b>: Vila Iracema <br><b>Distância</b>: 201 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6ce9c4c4cc78b9a0f5594748d50b4efd = L.marker(
+                [-21.763148754507743, -43.34462311819184],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_bbd92e9582e782bdc74732a9172c81ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_6ce9c4c4cc78b9a0f5594748d50b4efd.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Vila Iracema <br><b>Parada</b>: 9 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ce9c4c4cc78b9a0f5594748d50b4efd.setIcon(icon_bbd92e9582e782bdc74732a9172c81ac);
+            
+    
+            var poly_line_d882553ee4b650108cbf10c83239de91 = L.polyline(
+                [[-21.763148754507743, -43.34462311819184], [-21.76334208845321, -43.34573104693755]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_d882553ee4b650108cbf10c83239de91.bindTooltip(
+                `<div>
+                     <b>De</b>: Vila Iracema <br><b>Até</b>: Palacete dos Fellet <br><b>Distância</b>: 117 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_179a1ec455d65ab03f1780fb52ae1207 = L.marker(
+                [-21.76334208845321, -43.34573104693755],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_4a70215e3c6c92323576a7ba260e860d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_179a1ec455d65ab03f1780fb52ae1207.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Palacete dos Fellet <br><b>Parada</b>: 10 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_179a1ec455d65ab03f1780fb52ae1207.setIcon(icon_4a70215e3c6c92323576a7ba260e860d);
+            
+    
+            var poly_line_40b3dc3de1af09c16f76bd5258c2fd3a = L.polyline(
+                [[-21.76334208845321, -43.34573104693755], [-21.76393346168443, -43.34205031818927]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_40b3dc3de1af09c16f76bd5258c2fd3a.bindTooltip(
+                `<div>
+                     <b>De</b>: Palacete dos Fellet <br><b>Até</b>: Residência Raphael Arcuri <br><b>Distância</b>: 386 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b287a1eae19e4bf69034c9d636158daf = L.marker(
+                [-21.76393346168443, -43.34205031818927],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_3ca09e95bcf1ac2b3e64e98b251ebf94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b287a1eae19e4bf69034c9d636158daf.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Residência Raphael Arcuri <br><b>Parada</b>: 11 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b287a1eae19e4bf69034c9d636158daf.setIcon(icon_3ca09e95bcf1ac2b3e64e98b251ebf94);
+            
+    
+            var poly_line_4ac7a8cb2bb961984fedcb1ed0719681 = L.polyline(
+                [[-21.76393346168443, -43.34205031818927], [-21.763894356739176, -43.341967760518045]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_4ac7a8cb2bb961984fedcb1ed0719681.bindTooltip(
+                `<div>
+                     <b>De</b>: Residência Raphael Arcuri <br><b>Até</b>: Castelinho dos Bracher <br><b>Distância</b>: 10 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_05932dd33471f37625d9324b84684055 = L.marker(
+                [-21.763894356739176, -43.341967760518045],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_d0eed1644d813f9c5a43b8c18782eadb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_05932dd33471f37625d9324b84684055.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Castelinho dos Bracher <br><b>Parada</b>: 12 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_05932dd33471f37625d9324b84684055.setIcon(icon_d0eed1644d813f9c5a43b8c18782eadb);
+            
+    
+            var poly_line_9ae599dfaadc48f8ca2107a2808aa67e = L.polyline(
+                [[-21.763894356739176, -43.341967760518045], [-21.764444444444443, -43.34861111111111]],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            poly_line_9ae599dfaadc48f8ca2107a2808aa67e.bindTooltip(
+                `<div>
+                     <b>De</b>: Castelinho dos Bracher <br><b>Até</b>: Casa D´Itália <br><b>Distância</b>: 690 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e5d26160d93c787500db3c3aa6c9058b = L.marker(
+                [-21.764444444444443, -43.34861111111111],
+                {
+}
+            ).addTo(map_4879667e6fd9b8bf007e0d7019b2fff3);
+        
+    
+            var icon_014049bfcda808154c457a004a7e5ff3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "monument",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_e5d26160d93c787500db3c3aa6c9058b.bindTooltip(
+                `<div>
+                     <b>Nome</b>: Casa D´Itália <br><b>Parada</b>: 13 <br>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5d26160d93c787500db3c3aa6c9058b.setIcon(icon_014049bfcda808154c457a004a7e5ff3);
+            
+</script>
+</html>
