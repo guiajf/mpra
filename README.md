@@ -579,7 +579,6 @@ df_route_segments['distance_seg'] = df_route_segments.apply(
 print(df_route_segments)
 ```
 
-::: {.output .stream .stdout}
     JF                              obra            latitude           longitude  \
     Sequência                                                                      
     0                     Paço Municipal -21.761477323835130 -43.349845686905425   
