@@ -61,7 +61,7 @@ df_obras = pd.DataFrame(
 ``` python
 df_obras
 ```
-JF                       obra            latitude           longitude
+JF                       obra            latitude           longitude \
 0              Paço Municipal -21.761477323835130 -43.349845686905425
 1                  ED. CIAMPI -21.760658258306233 -43.349631277710635
 2               Galeria Pio X -21.760246094574889 -43.348784136608764
