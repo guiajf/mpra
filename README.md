@@ -307,7 +307,7 @@ print(df_route_segments)
     10         386.296860376926702  
     11           9.574199224964975  
     12         689.829427309359630  
-:::
+
 
 ### Calculamos a distância total a ser percorrida (km)
 
@@ -408,7 +408,3 @@ map_jf  # show map
 Uribe, C. J. (2024). *An intelligent decision support system for tourism
 in Python*. Publicado em Jan 16, 2024. Disponível em:
 <https://medium.com/@carlosjuribe/list/an-intelligent-decision-support-system-for-tourism-in-python-b6ba165b4236>
-
-``` python
-```
-
