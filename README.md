@@ -185,7 +185,7 @@ df_route_segments
 
 
 
-### Criamos o mapa interativo com marcadors personalizados
+### Criamos o mapa interativo com marcadores personalizados
 
 ``` python
 # Converta avg_location para uma tupla se for uma série do pandas
