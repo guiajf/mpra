@@ -16,7 +16,7 @@ do século XX.
 Inspirados na série de artigos escrita por **Carlos Jimenez Uribe**,
 intitulada *An intelligent decision support system for tourism in
 Python*, reproduzimos o trajeto em um mapa interativo, para fins
-didáticos, por meio de bibliotecas do Python
+didáticos, por meio de bibliotecas do Python.
 
 ### Importamos as bibliotecas
 
