@@ -401,7 +401,7 @@ map_jf.save("roteiro_mpra.html")
 map_jf  # show map
 ```
 ![](mpra_3.png)
-<iframe src="roteiro_mpra.html"></iframe>iframe>
+<iframe src="roteiro_mpra.html"></iframe>
 
 
 **Referências**
