@@ -1,28 +1,5 @@
----
-jupyter:
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
-  language_info:
-    codemirror_mode:
-      name: ipython
-      version: 3
-    file_extension: .py
-    mimetype: text/x-python
-    name: python
-    nbconvert_exporter: python
-    pygments_lexer: ipython3
-    version: 3.12.3
-  nbformat: 4
-  nbformat_minor: 5
----
-
-::: {#dceb8b69-6fe0-4879-85b8-de63b08cb96c .cell .markdown}
 # Museu de Percurso Raphael Arcuri
-:::
 
-::: {#82ee36aa-1f9d-4baf-bbc9-ed62924a7db1 .cell .markdown}
 No fim de semana, foi inaugurado oficialmente o [Museu de Percurso
 Raphael
 Arcuri](https://www.instagram.com/museuraphaelarcuri?igsh=MWRjNWV1cnZnczE5aQ==)
@@ -33,24 +10,16 @@ edificações consideradas como patrimônio histórico da cidade, de acordo
 com o roteiro baseado em algumas obras do arquiteto ítalo-brasileiro,
 reconhecido por projetar diversas construções em Juiz de Fora, no início
 do século XX.
-:::
 
-::: {#8f6a8ac9-670e-400f-988d-b226710498db .cell .markdown}
 ## Mapa interativo
-:::
 
-::: {#f438bfe6-08de-413e-a004-2b852667cfa9 .cell .markdown}
 Inspirados na série de artigos escrita por **Carlos Jimenez Uribe**,
 intitulada *An intelligent decision support system for tourism in
 Python*, reproduzimos o trajeto em um mapa interativo, para fins
 didáticos, por meio de bibliotecas do Python
-:::
 
-::: {#1764d082-f78a-4912-864b-593713a90bbe .cell .markdown}
 ### Importamos as bibliotecas
-:::
 
-::: {#89ac9195-87d7-4fe4-9880-87915e451b0a .cell .code execution_count="42"}
 ``` python
 import pandas as pd
 import folium
@@ -59,18 +28,12 @@ from typing import Tuple, List, Dict
 
 pd.set_option('display.precision', 15)
 ```
-:::
 
-::: {#7bc5fc4b-c61c-446d-b514-e6f2aad57d5d .cell .markdown}
 ### Definimos o data frame
-:::
 
-::: {#6c7d2eb0-f4cb-4d57-abcb-7f584a92fe11 .cell .markdown}
 Criamos o *data frame* contendo as coordenadas geográficas das obras de
 *Raphael Arcuri*.
-:::
 
-::: {#41634e06-e499-4c45-a01b-18a4980e1a39 .cell .code execution_count="43"}
 ``` python
 
 df_obras = pd.DataFrame(
@@ -91,13 +54,9 @@ df_obras = pd.DataFrame(
     columns=pd.Index(['obra', 'latitude', 'longitude'], name='JF')
 )
 ```
-:::
 
-::: {#4330a204-99c6-4214-8158-f73e7fa6580a .cell .markdown}
 ### Inspecionamos o *data frame*
-:::
 
-::: {#eeaa7161-cfd4-417f-bf76-6e6db4ead7b9 .cell .code execution_count="44"}
 ``` python
 df_obras
 ```
@@ -2721,18 +2680,13 @@ map_jf  # show map
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
 ```
-:::
-:::
 
-::: {#8a4ec288-f9dc-4ed6-9f1d-460c74eb59e4 .cell .markdown}
 **Referências**
 
 Uribe, C. J. (2024). *An intelligent decision support system for tourism
 in Python*. Publicado em Jan 16, 2024. Disponível em:
 <https://medium.com/@carlosjuribe/list/an-intelligent-decision-support-system-for-tourism-in-python-b6ba165b4236>
-:::
 
-::: {#0c7b5b80-2156-4ad2-a3c9-c8780a36baae .cell .code}
 ``` python
 ```
-:::
+
