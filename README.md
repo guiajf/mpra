@@ -406,7 +406,7 @@ map_jf  # show map
 
 **Considerações finais**
 
-Para explorar o mapa interativo, basta baixar o arquivo*roteiro _mpra.html* e abrir no navegador de sua preferência ou acessar o [app](https://museu-percurso-arcuri.vercel.app).
+Para explorar o mapa interativo, basta baixar o arquivo *roteiro_mpra.html* e abrir no navegador de sua preferência ou acessar o [app](https://museu-percurso-arcuri.vercel.app).
 
 
 
