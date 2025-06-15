@@ -404,6 +404,12 @@ map_jf  # show map
 
 
 
+**Considerações finais**
+
+Para explorar o mapa interativo, baixe o arquivo*roteiro _mpra.html* e abre no navegador de sua preferência ou acesse o [app](https://museu-percurso-arcuri.vercel.app).
+
+
+
 **Referências**
 
 Uribe, C. J. (2024). *An intelligent decision support system for tourism
